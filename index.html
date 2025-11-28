@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="es">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Juego del Amigo Secreto Seguro - 2025</title>
+    <link rel="stylesheet" href="./ccs/main.css">
+
+</head>
+
+<body>
+
+    <div class="container">
+
+        <div id="game-view">
+            <h1>🎄 ¿Quién eres?</h1>
+            <p>Selecciona tu nombre para ver tu amigo secreto.</p>
+            <div class="user-grid" id="user-grid">
+            </div>
+            <br>
+            <p style="font-size: 0.8rem; color: #7f8c8d;">**Nota: La lista de participantes y el sorteo ya están
+                guardados permanentemente en la web.**</p>
+        </div>
+
+        <div id="reveal-view" class="hidden">
+            <h2 id="reveal-title">Hola...</h2>
+            <p>Ingresa tu clave de seguridad (PIN) para ver el resultado:</p>
+            <input type="number" id="authPin" placeholder="Tu PIN secreto">
+            <button onclick="checkPin()">Ver Resultado</button>
+            <button onclick="backToGame()"
+                style="background: transparent; color: #7f8c8d; border: 1px solid #ccc;">Cancelar</button>
+
+            <div id="secret-result" class="hidden">
+                <p>Tu amigo secreto es:</p>
+                <div class="result-box" id="result-name">NOMBRE</div>
+                <p style="font-size: 0.8rem; color: #e74c3c;">¡Memorízalo! Este mensaje se ocultará al cerrar.</p>
+                <button onclick="backToGame()">🔒 Cerrar y Ocultar</button>
+            </div>
+        </div>
+    </div>
+
+    <script src="./js/app.js"></script>
+
+</body>
+
+</html>
